@@ -21,6 +21,7 @@ images, labels = get_mnist()
 
 
 ## Define Perceptron
+parallel = True
 
 HiddenNodes = [784, 40, 10]
 N = Perceptron(HiddenNodes)
@@ -34,7 +35,7 @@ test_output = labels[59500:]
 
 ## Train
 
-N.train(training_inputs, training_output, training_iterations)
+N.set_train(training_inputs, training_output, training_iterations)
 
 ## Test 1
 
